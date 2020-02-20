@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Job parameters -->
+<job maxFilesPerProcess="1" filesPerHour="1" fileListSyntax="xrootd">
+
+  <!-- Task list -->
+  <command>
+    stardev
+    root4star -q -b -l RunAnalyzer.C
+    root4star -q -b -l PicoDstAnalyzer3.C+\(\"$FILELIST\",\"$JOBID\",2\)
+  </command>
+
+  <!-- Necessary files -->
+  <SandBox installer="ZIP">
+    <Package>
+      <File>file:/star/u/dchen/GitHub/fxtPicoAna/StRoot</File>
+      <File>file:/star/u/dchen/GitHub/fxtPicoAna/RunAnalyzer.C</File>
+      <File>file:/star/u/dchen/GitHub/fxtPicoAna/PicoDstAnalyzer3.C</File>
+    </Package>
+  </SandBox>
+
+  <!-- Get input files from get_file_lis.pl -->
+  <input URL="filelist:/star/data01/pwg/dchen/Ana/fxtPicoAna/test.lis" nFiles="all" />
+  <!--input URL="file:/star/data01/pwg/ywu27/PicoDst/*.root" nFiles="all" /-->
+
+  <!-- Run log & error messages -->
+  <stdout URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.out" />
+  <stderr URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.err" />
+  <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/result/"/>
+
+</job>
