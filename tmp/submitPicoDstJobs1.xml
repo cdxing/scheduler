@@ -19,7 +19,7 @@
   </SandBox>
 
   <!-- Get input files from get_file_lis.pl -->
-  <input URL="filelist:/star/data01/pwg/dchen/Ana/fxtPicoAna/test.lis" nFiles="all" />
+  <input URL="filelist:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/3GeV_FXT_2018.lis" nFiles="100" />
   <!--input URL="file:/star/data01/pwg/ywu27/PicoDst/*.root" nFiles="all" /-->
 
   <!-- Run log & error messages -->
