@@ -7,21 +7,24 @@
   <command>
     stardev
     root4star -q -b -l RunAnalyzer.C+
-    root4star -q -b -l PicoDstAnalyzer3.C+\(\"$FILELIST\",\"$JOBID\",2\)
+    root4star -q -b -l PicoDstAnalyzer2.C+\(\"$FILELIST\",\"$JOBID\"\)
   </command>
 
   <!-- Necessary files -->
   <SandBox installer="ZIP">
     <Package>
-      <File>file:/star/u/dchen/GitHub/fxtPicoAna/StRoot</File>
-      <File>file:/star/u/dchen/GitHub/fxtPicoAna/RunAnalyzer.C</File>
-      <File>file:/star/u/dchen/GitHub/fxtPicoAna/PicoDstAnalyzer3.C</File>
+      <File>file:/star/u/dchen/GitHub/KKinvM/StRoot</File>
+      <File>file:/star/u/dchen/GitHub/KKinvM/RunAnalyzer.C</File>
+      <File>file:/star/u/dchen/GitHub/KKinvM/PicoDstAnalyzer2.C</File>
     </Package>
   </SandBox>
 
   <!-- Get input files from get_file_lis.pl -->
   <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/7p2GeV_2018_NFS.lis" nFiles="1000" />
   <!--input URL="file:/star/data01/pwg/ywu27/PicoDst/*.root" nFiles="all" /-->
+
+  <input URL="catalog:star.bnl.gov?production=P19ie,filetype=daq_reco_picoDst,trgsetupname=production_26p5GeV_fixedTarget_2018,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="1000" />
+
 
   <!-- Run log & error messages -->
   <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.out" /> -->
