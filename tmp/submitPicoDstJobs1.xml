@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Job parameters -->
 <job maxFilesPerProcess="1" filesPerHour="1" fileListSyntax="xrootd">
+  <stdout discard="true"/>
 
   <!-- Task list -->
   <command>
     stardev
-    root4star -q -b -l RunAnalyzer.C
+    root4star -q -b -l RunAnalyzer.C+
     root4star -q -b -l PicoDstAnalyzer3.C+\(\"$FILELIST\",\"$JOBID\",2\)
   </command>
 
@@ -19,11 +20,11 @@
   </SandBox>
 
   <!-- Get input files from get_file_lis.pl -->
-  <input URL="filelist:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/3GeV_FXT_2018.lis" nFiles="100" />
+  <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/7p2GeV_2018_NFS.lis" nFiles="1000" />
   <!--input URL="file:/star/data01/pwg/ywu27/PicoDst/*.root" nFiles="all" /-->
 
   <!-- Run log & error messages -->
-  <stdout URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.out" />
+  <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.out" /> -->
   <stderr URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.err" />
   <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/result/"/>
 
