@@ -25,7 +25,7 @@
 
   <!-- Run log & error messages -->
   <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.out" /> -->
-  <stderr URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.err" />
-  <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/result/"/>
+  <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/scheduler/out/$JOBID.err" />
+  <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/result/"/>
 
 </job>
