@@ -1,7 +1,8 @@
 #!/bin/sh
+#7919
 #20689
-nJob1=7919
-maxJob1=$1
+nJob1=$1
+maxJob1=$2
 
 DEBUG=true
 while [ $nJob1 -le $maxJob1 ]
