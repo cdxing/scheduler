@@ -17,4 +17,5 @@ do
     fi
     ((nJob1++))
 done
+wait
 #echo $nJob1
