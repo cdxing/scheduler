@@ -2,32 +2,26 @@
 <!-- Job parameters -->
 <job maxFilesPerProcess="1" filesPerHour="1" fileListSyntax="xrootd">
   <stdout discard="true"/>
-
   <!-- Task list -->
   <command>
     stardev
-    root4star -q -b -l RunAnalyzer.C+
-    root4star -q -b -l PicoDstAnalyzer3.C+\(\"$FILELIST\",\"$JOBID\",2\)
+    root4star -q -b ReadKaonTTree.C+\(\"$FILELIST\",\"&myFileName;\"\"_\"\"$JOBID\",&entryTestPar1;\)
   </command>
 
   <!-- Necessary files -->
   <SandBox installer="ZIP">
     <Package>
-      <File>file:/star/u/dchen/GitHub/fxtPicoAna/StRoot</File>
-      <File>file:/star/u/dchen/GitHub/fxtPicoAna/RunAnalyzer.C</File>
-      <File>file:/star/u/dchen/GitHub/fxtPicoAna/PicoDstAnalyzer3.C</File>
-      <File>file:/star/u/dchen/GitHub/fxtPicoAna/EpdEpCorrectionHistograms_INPUT.root</File>
+      <File>file:/star/u/dchen/GitHub/KKinvM/ReadKaonTTree.C</File>
+
     </Package>
   </SandBox>
 
   <!-- Get input files from get_file_lis.pl -->
-  <!-- <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/7p2GeV_2018_NFS.lis" nFiles="1000" /> -->
-  <!--input URL="file:/star/data01/pwg/ywu27/PicoDst/*.root" nFiles="all" /-->
-  <input URL="catalog:star.bnl.gov?production=P19ie,filetype=daq_reco_picoDst,trgsetupname=production_26p5GeV_fixedTarget_2018,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="all" />
+  <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/KaonTtree.lis" nFiles="all" />
 
   <!-- Run log & error messages -->
-  <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/3GeV_FXT_2018/scheduler/out/$JOBID.out" /> -->
-  <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/scheduler/out/$JOBID.err" />
-  <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/result/"/>
+  <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.out" /> -->
+  <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.err" />
+  <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/result/"/>
 
 </job>
