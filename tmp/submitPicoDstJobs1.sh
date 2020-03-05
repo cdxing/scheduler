@@ -1,10 +1,8 @@
 #!/bin/sh
-#nJob1=$1
+#20689
 nJob1=0
 maxJob1=$1
-#nJob2=$3
-# nJob2=0
-# maxJob2=$2
+
 DEBUG=true
 while [ $nJob1 -le $maxJob1 ]
 do
