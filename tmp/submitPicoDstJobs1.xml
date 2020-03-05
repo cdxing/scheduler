@@ -5,7 +5,7 @@
   <!-- Task list -->
   <command>
     stardev
-    root4star -q -b ReadKaonTTree.C+\(\"/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/merged_merged_D9AAA11F292FF0BA1047384EC836F91E.picoDst.result.root\",\"$JOBID\",$FILELIST;\)
+    root4star -q -b ReadKaonTTree.C+\(\"/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/merged_merged_D9AAA11F292FF0BA1047384EC836F91E.picoDst.result.root\",\"$JOBID\",$FILELIST\)
   </command>
 
   <!-- Necessary files -->
