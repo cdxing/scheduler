@@ -1,16 +1,15 @@
 #!/bin/sh
-# ./submitPicoDstJobs1.sh
-# 0 1999
-# 2000 3999
-# 4000 5999
-# 6000 7999
-# 8000 9999
-# 10000 11999
-# 12000 13999
-# 14000 15999
-# 16000 17999
-# 18000 19999
-# 20000 20689
+# ./submitPicoDstJobs1.sh 0 1999
+# ./submitPicoDstJobs1.sh 2000 3999
+# ./submitPicoDstJobs1.sh 4000 5999
+# ./submitPicoDstJobs1.sh 6000 7999
+# ./submitPicoDstJobs1.sh 8000 9999
+# ./submitPicoDstJobs1.sh 10000 11999
+# ./submitPicoDstJobs1.sh 12000 13999
+# ./submitPicoDstJobs1.sh 14000 15999
+# ./submitPicoDstJobs1.sh 16000 17999
+# ./submitPicoDstJobs1.sh 18000 19999
+# ./submitPicoDstJobs1.sh 20000 20689
 nJob1=$1
 maxJob1=$2
 
