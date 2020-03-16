@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Job parameters -->
 <job maxFilesPerProcess="1" filesPerHour="1" fileListSyntax="xrootd">
-  <!-- <stdout discard="true"/> -->
+  <stdout discard="true"/>
   <!-- Task list -->
   <command>
     stardev
-    root4star -q -b ReadKaonTTree.C+\(\"$FILELIST\",\"&myFileName;\"\"_\"\"$JOBID\",&entryTestPar1;\)
+    root4star -q -b ReadKaonTTree.C+\(\"$FILELIST\",\"$JOBID\"\)
   </command>
 
   <!-- Necessary files -->
@@ -17,10 +17,10 @@
   </SandBox>
 
   <!-- Get input files from get_file_lis.pl -->
-  <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/KaonTtree.lis" nFiles="all" />
+  <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/SplitKaonTree/SplitKTree.lis" nFiles="all" />
 
   <!-- Run log & error messages -->
-  <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.out" />
+  <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.out" /> -->
   <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.err" />
   <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/result/"/>
 
