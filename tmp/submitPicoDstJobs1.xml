@@ -5,14 +5,15 @@
   <!-- Task list -->
   <command>
     stardev
-    root4star -q -b ReadKaonTTree.C+\(\"$FILELIST\",\"$JOBID\"\)
+    root4star -b -q RunAnalyzer.C+
+    root4star -b -q PicoAnalyzer.C+\(\"$FILELIST\",\"$JOBID\"\)
   </command>
 
   <!-- Necessary files -->
   <SandBox installer="ZIP">
     <Package>
-      <File>file:/star/u/dchen/GitHub/KKinvM/ReadKaonTTree.C</File>
-
+      <File>file:/star/u/dchen/GitHub/EpdAna/RunAnalyzer.C</File>
+      <File>file:/star/u/dchen/GitHub/EpdAna/PicoAnalyzer.C</File>
     </Package>
   </SandBox>
 
