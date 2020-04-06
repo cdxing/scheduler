@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Job parameters -->
 <job maxFilesPerProcess="1" filesPerHour="1" fileListSyntax="xrootd">
-  <stdout discard="true"/>
+  <!-- <stdout discard="true"/> -->
   <!-- Task list -->
   <command>
     stardev
@@ -12,16 +12,17 @@
   <!-- Necessary files -->
   <SandBox installer="ZIP">
     <Package>
+      <File>file:/star/u/dchen/GitHub/EpdAna/StRoot</File>
       <File>file:/star/u/dchen/GitHub/EpdAna/RunAnalyzer.C</File>
       <File>file:/star/u/dchen/GitHub/EpdAna/PicoAnalyzer.C</File>
     </Package>
   </SandBox>
 
   <!-- Get input files from get_file_lis.pl -->
-  <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/SplitKaonTree/SplitKTree.lis" nFiles="all" />
+  <input URL="catalog:star.bnl.gov?production=P19ie,filetype=daq_reco_picoDst,trgsetupname=production_26p5GeV_fixedTarget_2018,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="all" />
 
   <!-- Run log & error messages -->
-  <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.out" /> -->
+  <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.out" />
   <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/$JOBID.err" />
   <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/result/"/>
 
