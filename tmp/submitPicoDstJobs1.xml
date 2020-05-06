@@ -14,8 +14,7 @@
     <Package>
       <File>file:/star/u/dchen/GitHub/EpdAna/StRoot</File>
       <File>file:/star/u/dchen/GitHub/EpdAna/RunAnalyzer.C</File>
-      <File>file:/star/u/dchen/GitHub/EpdAna/PicoAnalyzer.C</File>
-      <File>file:/star/u/dchen/GitHub/EpdAna/EpdEpCorrectionHistograms_INPUT.root</File>
+      <File>file:/star/u/dchen/GitHub/EpdAna/PicoAnalyzer.cxx</File>
       <File>file:/star/u/dchen/GitHub/EpdAna/EpdEpCorrectionAbInitioInput.root</File>
     </Package>
   </SandBox>
