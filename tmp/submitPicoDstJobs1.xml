@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Job parameters -->
 <job maxFilesPerProcess="10" filesPerHour="10" fileListSyntax="xrootd">
-  <stdout discard="true"/>
+  <!-- <stdout discard="true"/> -->
   <!-- Task list -->
   <command>
     stardev
@@ -20,7 +20,7 @@
   <input URL="filelist:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/SplitKaonTree/SplitTreeVer2.list" nFiles="all" />
 
   <!-- Run log & error messages -->
-  <!-- <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/&myFileName;_$JOBID.out" /> -->
+  <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/$JOBID.out" />
   <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/scheduler/out/$JOBID.err" />
   <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/KKinvM/result/"/>
 
