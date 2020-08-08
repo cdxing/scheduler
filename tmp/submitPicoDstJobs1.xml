@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Job parameters -->
-<job maxFilesPerProcess="10" filesPerHour="10" fileListSyntax="xrootd">
+<job maxFilesPerProcess="1" filesPerHour="1" fileListSyntax="xrootd">
   <!-- <stdout discard="true"/> -->
   <!-- Task list -->
   <command>
-    stardev
+    <!-- stardev
     root4star -b -q RunAnalyzer.C+
-    root4star -b -q PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",2\)
+    root4star -b -q PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",2\) -->
   </command>
 
   <!-- Necessary files -->
   <SandBox installer="ZIP">
     <Package>
-      <File>file:/star/u/dchen/GitHub/EpdAna/StRoot</File>
+      <!-- <File>file:/star/u/dchen/GitHub/EpdAna/StRoot</File>
       <File>file:/star/u/dchen/GitHub/EpdAna/RunAnalyzer.C</File>
       <File>file:/star/u/dchen/GitHub/EpdAna/PicoAnalyzer.cxx</File>
-      <File>file:/star/u/dchen/GitHub/EpdAna/EpCorrection_INPUT.root</File>
+      <File>file:/star/u/dchen/GitHub/EpdAna/EpCorrection_INPUT.root</File> -->
     </Package>
   </SandBox>
 
