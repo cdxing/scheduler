@@ -20,7 +20,7 @@
   </SandBox>
 
   <!-- Get input files from get_file_lis.pl -->
-  <input URL="catalog:star.bnl.gov?production=P19ic,filetype=daq_reco_picoDst,trgsetupname=production_14p5GeV_2019,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="all" />
+  <input URL="catalog:star.bnl.gov?production=P18ih,filetype=daq_reco_picoDst,trgsetupname=AuAu_200_production_2014,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="all" />
 
   <!-- Run log & error messages -->
   <stdout URL="file:/star/data01/pwg/dchen/playground/scheduler/out/$JOBID.out" />
