@@ -32,9 +32,9 @@ do
         echo $nJob2
         if ${DEBUG}; then
         # Print the command
-        echo "star-submit-template -template submitPicoDstJobs3.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3"
+        echo "star-submit-template -template submitPicoDstJobs_v2_sysErr.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3"
         # Execute the command
-        star-submit-template -template submitPicoDstJobs3.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3
+        # star-submit-template -template submitPicoDstJobs_v2_sysErr.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3
         ((nNumber++))
         echo "total submits: $nNumber"
         fi
