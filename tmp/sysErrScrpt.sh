@@ -38,10 +38,7 @@ do
         ((nNumber++))
         echo "total submits: $nNumber"
         fi
-        if(($nJob1 == 3 && $nJob2 ==1)); then
-        break # cutID = 3: binning - 2 variations
-        fi
-        if(($nJob1 == 13 && $nJob2 ==1)); then
+        if(($nJob1 == 12 && $nJob2 ==1)); then
         break # cutID = 13: Dip Angle - 2 variations
         fi
         ((nJob2++))
