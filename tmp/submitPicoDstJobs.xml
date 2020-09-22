@@ -6,7 +6,7 @@
   <command>
     stardev
     root4star -b -q RunAnalyzer.C+
-    root4star -b -q PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\", 1, 12, 1, 1 \)
+    root4star -b -q PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",1,12,1,1\)
   </command>
 
   <!-- Necessary files -->
