@@ -26,7 +26,7 @@ DEBUG=true
 while [ $nJob1 -le $maxJob1 ]
 do
     echo $nJob1
-    nJob2=0
+    nJob2=1
     while [ $nJob2 -le $maxJob2 ]
     do
         echo $nJob2
