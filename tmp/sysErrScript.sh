@@ -25,10 +25,10 @@ nNumber=0 # total # of submits
 DEBUG=true
 while [ $nJob1 -le $maxJob1 ]
 do
-  if($nJob1 == 14 -o $nJob1 == 15); then
-    ((nJob1++))
-    continue
-  fi
+    if($nJob1 == 14 -o $nJob1 == 15); then
+      ((nJob1++))
+      continue
+    fi
     echo $nJob1
     nJob2=1
     while [ $nJob2 -le $maxJob2 ]
