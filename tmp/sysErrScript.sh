@@ -37,6 +37,12 @@ do
     nJob2=1
     while [ $nJob2 -le $maxJob2 ]
     do
+        if(($nJob1 == 14)); then
+          break # cutID = 13: Dip Angle - 2 variations
+        fi
+        if(($nJob1 == 15)); then
+          break # cutID = 13: Dip Angle - 2 variations
+        fi
         echo $nJob2
         if ${DEBUG} -a ; then
         # Print the command
