@@ -48,7 +48,7 @@ do
         # Print the command
         echo "star-submit-template -template submitPicoDstJobs_ver2_sys.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3"
         # Execute the command
-        # star-submit-template -template submitPicoDstJobs_ver2_sys.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3
+        star-submit-template -template submitPicoDstJobs_ver2_sys.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3
         ((nNumber++))
         echo "total submits: $nNumber"
         fi
