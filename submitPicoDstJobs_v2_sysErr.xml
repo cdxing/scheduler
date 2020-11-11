@@ -6,7 +6,7 @@
   <command>
     stardev
     root -q -b -l RunAnalyzer.C+
-    root -q -b -l PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",1,&cutID;,&varID;,&iterID;\)
+    root -q -b -l PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",2,&cutID;,&varID;,&iterID;\)
     <!-- star-submit-template -template submitPicoDstJobs3.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3 -->
     <!-- The paramters are EpOrder, sys_cutN, sys_varN, sys_iterN -->
   </command>
@@ -14,10 +14,10 @@
   <!-- Necessary files -->
   <SandBox installer="ZIP">
     <Package>
-      <File>file:/star/u/dchen/GitHub/EpdAna/StRoot</File>
-      <File>file:/star/u/dchen/GitHub/EpdAna/RunAnalyzer.C</File>
-      <File>file:/star/u/dchen/GitHub/EpdAna/PicoAnalyzer.cxx</File>
-      <!-- <File>file:/star/u/dchen/GitHub/EpdAna/EpCorrection_INPUT.root</File> -->
+      <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/StRoot</File>
+      <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/RunAnalyzer.C</File>
+      <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/PicoAnalyzer.cxx</File>
+      <!-- <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/EpCorrection_INPUT.root</File> -->
     </Package>
   </SandBox>
 
@@ -25,8 +25,8 @@
   <input URL="catalog:star.bnl.gov?production=P19ie,filetype=daq_reco_picoDst,trgsetupname=production_26p5GeV_fixedTarget_2018,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="all" />
 
   <!-- Run log & error messages -->
-  <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/scheduler/out/$JOBID.out" />
-  <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/scheduler/out/$JOBID.err" />
-  <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018/result/"/>
+  <stdout URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018_psi2/scheduler/out/$JOBID.out" />
+  <stderr URL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018_psi2/scheduler/out/$JOBID.err" />
+  <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/Ana/7p2GeV_FXT_2018_psi2/result/"/>
 
 </job>
