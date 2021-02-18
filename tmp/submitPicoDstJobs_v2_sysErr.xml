@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Job parameters -->
-<job maxFilesPerProcess="1" filesPerHour="10" fileListSyntax="xrootd">
+<job maxFilesPerProcess="10" filesPerHour="0.1" fileListSyntax="xrootd">
   <!-- <stdout discard="true"/> -->
   <!-- Task list -->
   <command>
