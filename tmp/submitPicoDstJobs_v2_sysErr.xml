@@ -14,9 +14,9 @@
   <!-- Necessary files -->
   <SandBox installer="ZIP">
     <Package>
-      <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/StRoot</File>
-      <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/RunAnalyzer.C</File>
-      <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/PicoAnalyzer.cxx</File>
+      <File>file:/star/u/dchen/27GeV_phi_flow/EpdAna/StRoot</File>
+      <File>file:/star/u/dchen/27GeV_phi_flow/EpdAna/RunAnalyzer.C</File>
+      <File>file:/star/u/dchen/27GeV_phi_flow/EpdAna/PicoAnalyzer.cxx</File>
       <!-- <File>file:/star/u/dchen/GitHub_7p2GeV_psi_2/EpdAna/EpCorrection_INPUT.root</File> -->
     </Package>
   </SandBox>
