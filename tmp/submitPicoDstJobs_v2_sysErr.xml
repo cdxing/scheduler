@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Job parameters -->
-<job minFilesPerProcess="5" maxFilesPerProcess="100" filesPerHour="0.1" fileListSyntax="xrootd">
+<job minFilesPerProcess="5" maxFilesPerProcess="100" filesPerHour="10" fileListSyntax="xrootd">
   <!-- <stdout discard="true"/> -->
   <!-- Task list -->
   <command>
     stardev
     root4star -q -b -l RunAnalyzer.C+
-    root4star -q -b -l PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",1,&cutID;,&varID;,&iterID;\)
+    root4star -q -b -l PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",2,&cutID;,&varID;,&iterID;\)
     <!-- star-submit-template -template submitPicoDstJobs3.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3 -->
     <!-- The paramters are EpOrder, sys_cutN, sys_varN, sys_iterN -->
   </command>
@@ -23,7 +23,7 @@
 
   <!-- Get input files from get_file_lis.pl -->
   <!-- <input URL="catalog:star.bnl.gov?production=P19ie,filetype=daq_reco_picoDst,trgsetupname=production_26p5GeV_fixedTarget_2018,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="10" /> -->
-  <input URL="catalog:star.bnl.gov?filetype=daq_reco_picoDst,trgsetupname=27GeV_production_2018,storage!=HPSS,filename~st_physics,production=P19ib" nFiles="1000"/>
+  <input URL="catalog:star.bnl.gov?filetype=daq_reco_picoDst,trgsetupname=27GeV_production_2018,storage!=HPSS,filename~st_physics,production=P19ib" nFiles="all"/>
 
   <!-- Run log & error messages -->
   <stdout URL="file:/star/data01/pwg/dchen/Ana/27gev_col_phi_flow/scheduler/out/$JOBID.out" />
