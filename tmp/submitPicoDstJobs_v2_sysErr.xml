@@ -23,7 +23,7 @@
 
   <!-- Get input files from get_file_lis.pl -->
   <!-- <input URL="catalog:star.bnl.gov?production=P19ie,filetype=daq_reco_picoDst,trgsetupname=production_26p5GeV_fixedTarget_2018,tpx=1,filename~st_physics,sanity=1,storage!=HPSS" nFiles="10" /> -->
-  <input URL="catalog:star.bnl.gov?filetype=daq_reco_picoDst,trgsetupname=27GeV_production_2018,storage!=HPSS,filename~st_physics,production=P19ib" nFiles="all"/>
+  <input URL="catalog:star.bnl.gov?filetype=daq_reco_picoDst,trgsetupname=27GeV_production_2018,storage!=HPSS,filename~st_physics,production=P19ib" nFiles="10000"/>
 
   <!-- Run log & error messages -->
   <stdout URL="file:/star/data01/pwg/dchen/Ana/27gev_col_phi_flow/scheduler/out/$JOBID.out" />
