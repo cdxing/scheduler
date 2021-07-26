@@ -26,8 +26,14 @@
   <!--<input URL="catalog:star.bnl.gov?filetype=daq_reco_picoDst,trgsetupname=27GeV_production_2018,storage!=HPSS,filename~st_physics,production=P19ib" nFiles="10000"/> -->
  <input URL="filelist:/star/u/slan/pwg/fastoffline/7p7gev/list/7p7_fast_pico.list" nFiles="all"/>
   <!-- Run log & error messages -->
-  <stdout URL="file:/star/data01/pwg/dchen/fastoffline/7p7gev/EpdAna/scheduler/out/$JOBID.out" />
-  <stderr URL="file:/star/data01/pwg/dchen/fastoffline/7p7gev/EpdAna/scheduler/out/$JOBID.err" />
+  
+  <Generator>
+	<Location>./report/</Location>
+	<ScriptLocation>./csh/</ScriptLocation>
+	<ListLocation>./list/</ListLocation>
+  </Generator>
+  <stdout URL="file:./out/$JOBID.out" />
+  <stderr URL="file:./err/$JOBID.err" />
   <output fromScratch="*.root" toURL="file:/star/data01/pwg/dchen/fastoffline/7p7gev/EpdAna/scheduler/result/"/>
 
 </job>
