@@ -6,7 +6,7 @@
   <command>
     stardev
     root4star -q -b -l RunAnalyzer.C+
-    root4star -q -b -l PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",2,&cutID;,&varID;,&iterID;\)
+    root4star -q -b -l PicoAnalyzer.cxx+\(\"$FILELIST\",\"$JOBID\",1,&cutID;,&varID;,&iterID;\)
     <!-- star-submit-template -template submitPicoDstJobs3.xml -entities cutID=$nJob1,varID=$nJob2,iterID=$nJob3 -->
     <!-- The paramters are EpOrder, sys_cutN, sys_varN, sys_iterN -->
   </command>
